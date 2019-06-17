@@ -3,7 +3,7 @@ package action
 import (
 	"fmt"
 	"os"
-	
+	"bufio"
 	// "io/ioutil"
 	// "math/rand"
 	// "time"
@@ -11,13 +11,27 @@ import (
 
 var nameHero string
 func Greeting(){
-	fmt.Println("Введите свое имя (Например Vasya_Pupkin): ")
-	fmt.Fscan(os.Stdin,&nameHero)
-	fmt.Println("Your name is: ",nameHero)
-	if nameHero==" " {
-		fmt.Println("Пустое значение! ")
-		Greeting()
-	}else{
-		ActionGame()
-	}
+	
+	
+	// fmt.Fscan(os.Stdin,&nameHero)
+	
+	// fmt.Scanf("%[^\n]s",nameHero)
+	myscanner := bufio.NewScanner(os.Stdin)
+	myscanner.Scan()
+	nameHero= myscanner.Text()
+	if nameHero!="" {
+		fmt.Println("Your name is: ",nameHero)
+			ActionGame()
+		}else{
+				// fmt.Println("Пустое значение! ")
+				Greeting()
+			}
+	// switch nameHero{
+	// case " ":
+	// 	fmt.Println("Пустое значение! ")
+	// 	Greeting()
+	// default:
+	// 	ActionGame()
+	
+	// }
 }

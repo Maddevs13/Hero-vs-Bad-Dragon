@@ -24,6 +24,7 @@ func StartGame(){
 				switch(req){
 					case "yes":
 						fmt.Println("--------------------")
+	fmt.Println("Введите свое имя (Например Vasya_Pupkin): ")
 						Greeting()
 						
 		// test()
