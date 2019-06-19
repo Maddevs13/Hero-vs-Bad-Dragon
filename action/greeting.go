@@ -23,15 +23,8 @@ func Greeting(){
 		fmt.Println("Your name is: ",nameHero)
 			ActionGame()
 		}else{
-				// fmt.Println("Пустое значение! ")
+				fmt.Println("Пустое значение! ")
 				Greeting()
 			}
-	// switch nameHero{
-	// case " ":
-	// 	fmt.Println("Пустое значение! ")
-	// 	Greeting()
-	// default:
-	// 	ActionGame()
 	
-	// }
 }
