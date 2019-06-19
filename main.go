@@ -3,21 +3,24 @@ import (
 	"fmt"
 	"os"
 
-    "./action"
+	"./action"
+	
 )
+var tabulation string
 
-var menu string
+var menu int
 func main(){
-	fmt.Println("Герой против Дракона")
+	tabulation="\n\t\t\t"
+	fmt.Println(tabulation," | Герой против Дракона | ")
 	fmt.Println("Начать игру (print 1),\nВыход (print 2)")
 	fmt.Fscan(os.Stdin, &menu)
 	// fmt.Scanf("%[^\n]s",&menu)
-		if menu=="1"{
+		if menu==1{
 	action.StartGame()
-		}else if menu=="2"{
-			
+		}else if menu==2{
+			action.EndGame()
 		}else{
-			fmt.Println("Uncorrect!")
+			fmt.Println(tabulation, "Uncorrect!")
 			// main()	
 		}
 

@@ -9,26 +9,25 @@ import (
 	// "time"
 )
 var a string
-// var req string
+var req5 int
 func StartGame(){
+	tabulation:="\t\t\t"
 
-	fmt.Println("Добро пожаловать в игру 'Герой против Дракона' ")
+	fmt.Println(tabulation, " | Добро пожаловать в игру 'Герой против Дракона | ' ")
 	fmt.Println(" Press A ")
 	fmt.Fscan(os.Stdin, &a) 
 		if a=="A" || a== "a"{
 				
-			fmt.Println("Сразишься с драконом:(print: yes)")
-			fmt.Println("Не я лучше домой ДОМ 2 смотреть (print : no)")
+			fmt.Println(tabulation,"Сразишься с драконом:(print: 1)")
+			fmt.Println(tabulation, "Не я лучше домой ДОМ 2 смотреть (print : 2)")
 	
-			fmt.Fscan(os.Stdin, &req) 
-				switch(req){
-					case "yes":
+			fmt.Fscan(os.Stdin, &req5) 
+				switch(req5){
+					case 1:
 						fmt.Println("--------------------")
 	fmt.Println("Введите свое имя (Например Vasya_Pupkin): ")
 						Greeting()
-						
-		// test()
-					case "no":
+					case 2:
 						fmt.Println("Suck me!")
 							StartGame()
 					default:
@@ -36,9 +35,6 @@ func StartGame(){
 							StartGame()	
 						}
 						
-			// DragonBattle()
-			// DragonBattle2()
-			// raundes.RaundThree()
 			}else{
 			fmt.Println("Uncorrect! Начать заново.... ")
 			StartGame()
